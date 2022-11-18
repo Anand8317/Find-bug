@@ -144,7 +144,7 @@ const error = document.querySelector('.error');
 const text = document.querySelector('#form-in1');
 const mess = document.querySelector('.form-msg');
 
-if (typeof(localStorage) === true) {
+if (typeof(localStorage) !== "undefined") {
   const data = JSON.parse(localStorage.getItem('data'));
   text.value = data.name;
   email.value = data.email;
